@@ -1,6 +1,7 @@
 import React from 'react'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Header from "./Components/Header/Header"
+import 'fontsource-roboto';
 
 const theme = createMuiTheme({
   palette:{
