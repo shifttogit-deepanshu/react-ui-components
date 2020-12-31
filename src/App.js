@@ -6,10 +6,10 @@ import 'fontsource-roboto';
 const theme = createMuiTheme({
   palette:{
     primary:{
-      main:"#90caf9"
+      main:"rgba(25, 181, 254, 1)"
     },
     secondary:{
-      main:"#f48fb1"
+      main:"rgba(224, 130, 131, 1)"
     }
   }
 })
@@ -20,6 +20,7 @@ function App() {
     <ThemeProvider theme={theme}>
     <div className="App">
     <Header/>
+    <img src="/assets/story.png" alt="image"/>
     </div>    
     </ThemeProvider>
   );

@@ -1,55 +1,63 @@
-import React from 'react'
+import React from "react"
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-
 const useStyles = makeStyles({
-    root:{background:"#1f1f1f"},
-    navLabels:{
-        color:"#90caf9"
+    root: {
+        background:"rgba(0,0,0,0.5)",
+        top:0,
+        backdropFilter:"blur(8px)"
+    },
+    title:{
+        color:"rgba(255,255,255,0.7)",
+        fontWeight:600
+    },
+    midline:{
+        borderTopColor:"rgba(255,255,255,0.7)",
+        borderTopWidth:1,
     }
-})
-;
-    
-const Header=()=> {
+    // test:{
+    //     background:"red"
+    // }
+  });
+  
+
+const Header = ()=>{
     const classes = useStyles()
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
       setValue(newValue);
     };
-      
-  return (
-      <AppBar className={classes.root}>
-        <Container maxWidth="xl">
-        <Grid container alignItems="center" justify='space-between'>
-        <Grid item xs={4}>
-            <Typography color="primary" display="inline" variant="h6">Deepanshu </Typography><Typography color="secondary" display="inline" variant="h6">Sharma</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Tabs
-            value={value}
-            onChange={handleChange}
-            textColor="secondary"
-            indicatorColor="#1f1f1f"
-            centered
-        >
-            <Tab label="Item One" disableRipple={true} className={classes.navLabels} />
-            <Tab label="Item Two" disableRipple={true} className={classes.navLabels}/>
-            <Tab label="Item Three" disableRipple={true} className={classes.navLabels}/>
-        </Tabs>
-        </Grid>
-        <Grid item xs={4}>
-        </Grid>
-        </Grid>
-        </Container>
-      </AppBar>
-  );
+    return (
+            <AppBar className={classes.root} position="fixed">
+                <Container>
+                <Grid container justify="space-between">
+                    <Grid item><Typography className={classes.title} variant="h6">Deepanshu Sharma</Typography></Grid>                    
+                    <Grid item><Typography className={classes.title} variant="h6">Deepanshu Sharma</Typography></Grid>
+                    <Grid item xs={12}>
+                    <Tabs
+                        value={value}
+                        onChange={handleChange}
+                        indicatorColor="black"
+                        textColor="black"
+                        centered
+                    >
+                        <Tab label="Item One" className={classes.title}/>
+                        <Tab label="Item Two" className={classes.title}/>
+                        <Tab label="Item Three" className={classes.title}/>
+                    </Tabs>
+                    </Grid>
+                </Grid>
+                
+                </Container>
+            </AppBar>
+    )
 }
 
-export default Header;
+export default Header
