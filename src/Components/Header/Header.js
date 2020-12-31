@@ -20,10 +20,6 @@ const useStyles = makeStyles({
     title:{
         color:"rgba(255,255,255,0.7)",
     },
-    midline:{
-        borderTopColor:"rgba(255,255,255,0.7)",
-        borderTopWidth:1,
-    },
     content:{
         color:"rgba(255,255,255,0.7)",
         fontWeight:600,
@@ -33,9 +29,6 @@ const useStyles = makeStyles({
             transition:"0.2s"
         }
     }
-    // test:{
-    //     background:"red"
-    // }
   });
   
 
@@ -51,9 +44,9 @@ const Header = ()=>{
                 <Container>
                 <Grid container justify="space-between">
                     <Grid item><Typography className={classes.content} variant="h6">Deepanshu Sharma</Typography></Grid>                    
-                    <Grid item><GitHubIcon className={classes.content}/><FacebookIcon className={classes.content}/><InstagramIcon className={classes.content}/></Grid>
+                    <Grid item><a href="https://github.com/shifttogit-deepanshu"><GitHubIcon className={classes.content}/></a><a href="https://www.facebook.com"><FacebookIcon className={classes.content}/></a><a href="https://www.instagram.com/dxxpxnshx/"><InstagramIcon className={classes.content}/></a></Grid>
                     <Grid item xs={12}>
-                    <Tabs
+                    <Tabs 
                         value={value}
                         onChange={handleChange}
                         textColor="primary"
