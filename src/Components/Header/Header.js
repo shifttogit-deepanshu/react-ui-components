@@ -20,17 +20,18 @@ const useStyles = makeStyles({
     title:{
         color:"rgba(255,255,255,0.7)",
     },
-    titleBold:{
-        color:"rgba(255,255,255,0.7)",
-        fontWeight:600
-    },
     midline:{
         borderTopColor:"rgba(255,255,255,0.7)",
         borderTopWidth:1,
     },
-    icons:{
+    content:{
         color:"rgba(255,255,255,0.7)",
+        fontWeight:600,
         marginRight:30,
+        "&:hover":{
+            color:"white",
+            transition:"0.2s"
+        }
     }
     // test:{
     //     background:"red"
@@ -49,8 +50,8 @@ const Header = ()=>{
             <AppBar className={classes.root} position="fixed">
                 <Container>
                 <Grid container justify="space-between">
-                    <Grid item><Typography className={classes.titleBold}  variant="h6">Deepanshu Sharma</Typography></Grid>                    
-                    <Grid item><GitHubIcon className={classes.icons}/><FacebookIcon className={classes.icons}/><InstagramIcon className={classes.icons}/></Grid>
+                    <Grid item><Typography className={classes.content} variant="h6">Deepanshu Sharma</Typography></Grid>                    
+                    <Grid item><GitHubIcon className={classes.content}/><FacebookIcon className={classes.content}/><InstagramIcon className={classes.content}/></Grid>
                     <Grid item xs={12}>
                     <Tabs
                         value={value}
