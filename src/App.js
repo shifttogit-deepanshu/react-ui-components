@@ -6,7 +6,7 @@ import 'fontsource-roboto';
 const theme = createMuiTheme({
   palette:{
     primary:{
-      main:"rgba(25, 181, 254, 1)"
+      main:"rgb(255,255,255)"
     },
     secondary:{
       main:"rgba(224, 130, 131, 1)"

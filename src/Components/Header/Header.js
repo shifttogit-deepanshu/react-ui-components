@@ -6,20 +6,31 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
+
 
 const useStyles = makeStyles({
     root: {
-        background:"rgba(0,0,0,0.5)",
+        background:"rgba(0,0,0,0.8)",
         top:0,
         backdropFilter:"blur(8px)"
     },
     title:{
+        color:"rgba(255,255,255,0.7)",
+    },
+    titleBold:{
         color:"rgba(255,255,255,0.7)",
         fontWeight:600
     },
     midline:{
         borderTopColor:"rgba(255,255,255,0.7)",
         borderTopWidth:1,
+    },
+    icons:{
+        color:"rgba(255,255,255,0.7)",
+        marginRight:30,
     }
     // test:{
     //     background:"red"
@@ -38,17 +49,19 @@ const Header = ()=>{
             <AppBar className={classes.root} position="fixed">
                 <Container>
                 <Grid container justify="space-between">
-                    <Grid item><Typography className={classes.title} variant="h6">Deepanshu Sharma</Typography></Grid>                    
-                    <Grid item><Typography className={classes.title} variant="h6">Deepanshu Sharma</Typography></Grid>
+                    <Grid item><Typography className={classes.titleBold}  variant="h6">Deepanshu Sharma</Typography></Grid>                    
+                    <Grid item><GitHubIcon className={classes.icons}/><FacebookIcon className={classes.icons}/><InstagramIcon className={classes.icons}/></Grid>
                     <Grid item xs={12}>
                     <Tabs
                         value={value}
                         onChange={handleChange}
-                        indicatorColor="black"
-                        textColor="black"
+                        textColor="primary"
+                        indicatorColor="primary"
                         centered
                     >
                         <Tab label="Item One" className={classes.title}/>
+                        <Tab label="Item Two" className={classes.title}/>
+                        <Tab label="Item Three" className={classes.title}/>
                         <Tab label="Item Two" className={classes.title}/>
                         <Tab label="Item Three" className={classes.title}/>
                     </Tabs>
